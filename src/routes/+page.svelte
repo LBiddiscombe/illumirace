@@ -30,7 +30,7 @@
 			<input
 				type="text"
 				bind:value={name}
-				class="input input-lg input-bordered text-center"
+				class="input input-lg input-bordered w-60 text-center"
 				placeholder="Name"
 			/>
 			<button
@@ -57,7 +57,7 @@
 			>
 		</div>
 		<div class="divider select-none">OR</div>
-		<a class="btn btn-outline btn-secondary btn-lg" href="/{getCode()}?name={name}"
+		<a class="btn btn-outline btn-secondary btn-lg w-60" href="/{getCode()}?name={name}"
 			>Host a New Game</a
 		>
 

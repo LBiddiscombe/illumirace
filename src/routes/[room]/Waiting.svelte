@@ -11,7 +11,6 @@
 			{ buttons: 9, pb: Number(localStorage.getItem(`pb9`) || Infinity) },
 			{ buttons: 16, pb: Number(localStorage.getItem(`pb16`) || Infinity) }
 		];
-		console.log(pbs);
 	});
 </script>
 
