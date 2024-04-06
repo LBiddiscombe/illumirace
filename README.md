@@ -1,4 +1,4 @@
-# sveltekit-partykit-starter
+# Illumnirace
 
 A really simple multiplayer game that uses Sveltekit (Svelte 5) and PartyKit. Built as an experiment to see if I can use this for a bigger game... the results are great!
 
@@ -12,6 +12,12 @@ They will light in a random order, but everyone in the same room gets the same.
 Click them all as fast as you can. A wrong move will be penalised with +0.5 seconds.
 
 Fastest to click them all wins!
+
+## Preparation
+- Cloned from `https://github.com/LBiddiscombe/sveltekit-partykit-starter.git`
+- Update `partykit.json` with new app name
+- Remove remote
+- Publish to new illumirace repo
 
 ## Local Development
 `npx partykit dev` to start the partykit development server
