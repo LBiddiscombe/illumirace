@@ -19,7 +19,7 @@ class Room {
       // @ts-ignore
       host: dev || window.isUnderTest
         ? 'http://192.168.1.8:1999'
-        : `https://sveltekit-partykit-starter-party.lbiddiscombe.partykit.dev`,
+        : `https://illumirace-party.lbiddiscombe.partykit.dev`,
       room,
       query: {
         playerName: name
