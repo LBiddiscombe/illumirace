@@ -21,48 +21,46 @@
 	});
 </script>
 
-<div
-	class="mx-auto grid h-screen max-h-svh place-items-center md:container md:max-h-[768px] md:max-w-md"
->
-	<div class="flex flex-col items-center gap-2">
-		<div class="mb-12 flex items-center justify-center gap-2">
-			<span class="text-4xl">Hi</span>
-			<input
-				type="text"
-				bind:value={name}
-				class="input input-lg input-bordered w-60 text-center"
-				placeholder="Name"
-			/>
-			<button
-				onclick={() => (name = getName())}
-				class="btn btn-lg border-0 bg-base-100 p-0 text-4xl">🎲</button
-			>
-		</div>
-
-		<div class="flex gap-2">
-			<input
-				type="text"
-				bind:value={room}
-				class="input input-lg input-bordered pr-4 font-mono text-4xl tracking-widest"
-				autocorrect="off"
-				autocomplete="off"
-				autocapitalize="off"
-				maxlength="4"
-				size="4"
-				placeholder="____"
-			/>
-			<a
-				class="btn btn-primary btn-lg"
-				href={room.length < 4 ? 'javascript:void(0)' : `/${room}?name=${name}`}>Join</a
-			>
-		</div>
-		<div class="divider select-none">OR</div>
-		<a class="btn btn-outline btn-secondary btn-lg w-60" href="/{getCode()}?name={name}"
-			>Host a New Game</a
+<div class="flex flex-col items-center gap-2">
+	<p class="neon-red neonText mb-12 font-[Neonderthaw] text-7xl font-extrabold">illumirace</p>
+	<div class="mb-12 flex items-center justify-center gap-2">
+		<span class="text-4xl">Hi</span>
+		<input
+			type="text"
+			bind:value={name}
+			class="input input-lg input-bordered w-60 border-red-500 text-center shadow-xl shadow-black"
+			placeholder="Name"
+		/>
+		<button
+			onclick={() => (name = getName())}
+			class="btn btn-lg border-0 bg-transparent p-0 text-4xl">🎲</button
 		>
-
-		<button class="mt-16 underline" onclick={() => modal.showModal()}>Show Help</button>
 	</div>
+
+	<div class="flex gap-2">
+		<input
+			type="text"
+			bind:value={room}
+			class="input input-lg input-bordered border-red-500 pr-4 font-mono text-4xl tracking-widest shadow-xl shadow-black"
+			autocorrect="off"
+			autocomplete="off"
+			autocapitalize="off"
+			maxlength="4"
+			size="4"
+			placeholder="____"
+		/>
+		<a
+			class="btn btn-primary btn-lg shadow-xl shadow-black"
+			href={room.length < 4 ? 'javascript:void(0)' : `/${room}?name=${name}`}>Join</a
+		>
+	</div>
+	<div class="divider select-none">OR</div>
+	<a
+		class="neon-red lit btn btn-outline btn-primary btn-lg w-60 border-2 shadow-xl shadow-black"
+		href="/{getCode()}?name={name}">Host a New Game</a
+	>
+
+	<button class="mt-16 underline" onclick={() => modal.showModal()}>Show Help</button>
 </div>
 
 <dialog id="my_modal" class="modal" bind:this={modal}>
@@ -72,7 +70,7 @@
 		<p class="">
 			Create a new game room, and share the code with friends, or join with a code shared with you.
 		</p>
-		<p class="">The "game" is simple - you'll be shown a grid of 1, 4, 9 or 16 lights.</p>
+		<p class="">The "game" is simple - you'll be shown a grid of 1, 4, or 9 lights.</p>
 		<p class="">They will light in a random order, but everyone in the same room gets the same.</p>
 		<p class="">
 			Click them all as fast as you can. A wrong move will be penalised with +0.5 seconds.

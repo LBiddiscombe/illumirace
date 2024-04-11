@@ -37,8 +37,8 @@
 	{#each leaderboard as player, i (player.id)}
 		<div
 			class="rounded-lg p-2 px-4"
-			class:bg-yellow-300={i === 0}
-			class:text-black={i === 0}
+			class:bg-accent={i === 0}
+			class:text-accent-content={i === 0}
 			animate:flip={{ duration: 250, easing: quintOut }}
 		>
 			{i === 0 ? '🏆 ' : `${i + 1}:`}

@@ -5,7 +5,7 @@ A really simple multiplayer game that uses Sveltekit (Svelte 5) and PartyKit. Bu
 ## The "Game"
 Create a new game room, and share the code with friends, or join with a code shared with you.
 
-The "game" is simple - you'll be shown a grid of 1, 4, 9 or 16 lights.
+The "game" is simple - you'll be shown a grid of 1, 4, or 9 lights.
 
 They will light in a random order, but everyone in the same room gets the same.
 

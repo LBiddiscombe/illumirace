@@ -9,6 +9,18 @@ const config = {
     extend: {}
   },
 
+  daisyui: {
+    themes: [
+      {
+        illumirace: {
+          ...require("daisyui/src/theming/themes")["synthwave"],
+          primary: "#ff5161",
+          secondary: "#51ff52",
+        },
+      },
+    ],
+  },
+
   plugins: [forms, daisyui]
 };
 

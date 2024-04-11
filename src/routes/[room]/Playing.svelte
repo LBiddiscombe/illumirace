@@ -32,9 +32,10 @@
 
 		const btn = gameState.buttons.find((b) => b.id === +target.value);
 		if (btn) btn.lit = true;
-		nextId += 1;
 
-		me.results.push(Date.now() - start);
+		setTimeout(() => (nextId += 1), 1000);
+
+		me.results.push(Date.now() - start - (+target.value - 1) * 1000);
 		if (me.results.length === gameState.buttons.length) {
 			me.results[me.results.length - 1] += penalties;
 			room.endGame();
@@ -56,8 +57,8 @@
 				<button
 					onclick={handleClick}
 					value={btn.id}
-					class="grid h-full w-full select-none place-items-center rounded-full border-4 border-base-300 bg-none text-5xl"
-					class:lit={btn.id === nextId}
+					class="neon neon-red grid h-full w-full select-none place-items-center rounded-full border-4 border-base-300 bg-none text-5xl"
+					class:lit={btn.id === nextId && !btn.lit}
 				>
 				</button>
 			{/each}
@@ -74,14 +75,3 @@
 	<div class="divider w-full">Yawn... waiting for others</div>
 {/if}
 <div data-testid="playing"></div>
-
-<style>
-	button.lit {
-		--neon: #00fe9b;
-		--neon-glow: #02c435;
-		border: 4px solid var(--neon);
-		box-shadow:
-			0 0 50px var(--neon-glow),
-			inset 0 0 50px var(--neon-glow);
-	}
-</style>

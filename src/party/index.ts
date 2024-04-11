@@ -27,7 +27,7 @@ export default class Server implements Party.Server {
   }
 
   resetGame(): GameState {
-    const buttonCount = randomArrayItem([1, 4, 9, 16]);
+    const buttonCount = randomArrayItem([1, 4, 9]);
     if (this.gameState?.players) {
       this.gameState.players.forEach((p) => {
         p.results = [];
